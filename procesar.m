@@ -30,7 +30,9 @@ while true
             if isempty(imgd)
                 disp('Elija primero el procesamiento 1 o 2 para tener una imagen donde localizar las figuras.');
             else
-            [pos,ori] = miLocalizacion(imgd);
+                [pos,ori] = miLocalizacion(imgd);
+                h=msgbox({'Se muestra la imagen resultante.','La posición y orientación de las figuras es:',sprintf('x= %f; y= %f\n',pos),sprintf('%f\n',ori)});
+                waitfor(h);
             end
         elseif eleccion == 4
             archivo=abrir_img_dsd_explorador;
@@ -38,6 +40,7 @@ while true
             figure,imshow(imagen);
             h=msgbox('Se muestra la imagen para verificar que se ha cargado correctamente. ');
             waitfor(h);
+            imgd=[];
         else
             disp('Opción no definida.');
         end
