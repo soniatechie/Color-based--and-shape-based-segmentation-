@@ -1,12 +1,4 @@
-%NOTA: La variable ‘color’ puede adoptar los valores ‘1’ para rojo, ‘2’ para verde,
-%‘3’ para azul y ‘4’ para cualquier otro color.
-
 function [numcolor,imgd]=miSegmentacion_color(imgo,color)%cambiar imagen per imgo
-%%%%Esto irá fuera, lo dejo para pruebas
-%imagen = imread('plantilla.bmp');
-%figure, imshow(imagen);
-%%%%%%hasta aquí
-
 I=rgb2hsv(imgo);
 
 if color == 1 %rojo

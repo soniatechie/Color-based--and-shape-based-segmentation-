@@ -1,13 +1,4 @@
 function [numforma,imgd]=miSegmentacion_forma(imgo,forma)
-%miSegmentacion_forma Summary of this function goes here
-%   Detailed explanation goes here
-%tic
-%%%%%%%Esto se hará en otro sitio pero lo dejo aquí para las pruebas
-%imagen = imread(imgo);
-%imgo=imcomplement(imbinarize(rgb2gray(imagen)));
-%figure(1), imshow(imgb);
-%%%%%%hasta aquí
-
 s = regionprops(imgo,'Perimeter','Area','Extent');
 CC = bwconncomp(imgo);
 for i=1:length(s)
